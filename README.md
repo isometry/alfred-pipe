@@ -6,7 +6,7 @@ A workflow for [Alfred](http://www.alfredapp.com/) to transform the currently se
 
 - [Alfred](http://www.alfredapp.com/) (version 2.0+)
 - The [Alfred Powerpack](http://www.alfredapp.com/powerpack/).
-- [pipe.alfredworkflow](https://raw.github.com/isometry/alfredworkflows/pipe.alfredworkflow)
+- [pipe.alfredworkflow](https://raw.github.com/isometry/alfredworkflows/master/pipe.alfredworkflow)
 
 ## Usage
 
