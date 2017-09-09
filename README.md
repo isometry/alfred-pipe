@@ -9,7 +9,13 @@ An [Alfred](http://www.alfredapp.com/) workflow enabling easy transformation of 
 
 ## Usage
 
-Trigger the workflow by hotkey or keyword (default=`|`, override with the `keyword` variable) followed by an arbitrarily simple or complex shell one-liner to transform the contents of the clipboard in-place; optionally use the `Cmd`-modifier to immediately paste the results into the foreground app.
+Trigger the workflow by hotkey or keyword (default=`|`, override with the `keyword` variable) followed by an arbitrarily simple or complex shell one-liner to transform the contents of the clipboard in-place; optionally use the `Cmd`-modifier to immediately paste the results into the foreground app, or the `Alt`-modifier to show the results in large type.
+
+Two hotkeys are configurable:
+- transform the current contents of the clipboard (like the keyword); recommended hotkey: `Ctrl-Cmd-\`
+- transform the current selection in the foreground app; recommended hotkey: `Ctrl-Cmd-C`
+
+When triggered via hotkey, the leading keyword (e.g. `|`) is not required.
 
 ### Examples
 
