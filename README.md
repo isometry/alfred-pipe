@@ -1,53 +1,48 @@
-# pipe workflow by isometry
+# pipe transformation workflow for Alfred
 
-A workflow for [Alfred](http://www.alfredapp.com/) to transform the currently selected text or the contents of the clipboard by passing it through an arbitrary shell one-liner.
+An [Alfred](http://www.alfredapp.com/) workflow enabling easy transformation of the current contents of the clipboard by piping through arbitrary shell one-liners.
 
 ## Requirements
 
 - [Alfred](http://www.alfredapp.com/) (version 2.0+)
 - The [Alfred Powerpack](http://www.alfredapp.com/powerpack/).
-- [pipe.alfredworkflow](https://raw.github.com/isometry/alfredworkflows/master/pipe.alfredworkflow)
 
 ## Usage
 
-(Optional) assign hotkeys for the two Hotkey handlers in the workflow. I recommend `Cmd+Shift+|` and `Cmd+Ctrl+\`, respectively.
+Trigger the workflow by hotkey or keyword (default=`|`, override with the `keyword` variable) followed by an arbitrarily simple or complex shell one-liner to transform the contents of the clipboard in-place; optionally use the `Cmd`-modifier to immediately paste the results into the foreground app.
 
-Two actions are available, both taking an arbitrarily complex shell pipe as their argument:
+### Examples
 
-1. triggered by the first hotkey or by the `|` or `pipe` keywords, will transform the clipboard in-place by passing its contents through the pipe given as argument.
-2. triggered by the second hotkey, will transform the currently selected text in-place by passing its contents through the pipe given as argument.
+- Transform to UPPERCASE: `| perl -nle 'print uc'` or `| tr a-z A-Z`
+- Base64 encode: `| base64`
+- Base64 decode: `| base64 --decode`
+- Top 10 unique lines with counts: `| sort | uniq -c | sort -rn | head -10`
 
-A number of built-in pipelines are [included](https://raw.github.com/isometry/alfredworkflows/net.isometry.alfred.pipe/builtins.json), and custom aliases can also be defined with the following syntax:
+### Built-ins
 
-`| alias NAME=PIPE | LINE@@`
+A number of example pipelines (including those above) are [built-in](https://github.com/isometry/alfred-pipe/raw/master/builtins.json).
 
-`| alias tac=sed '1!G;h;$!d'@@`
+Built-ins can be disabled en-mass by setting the `load_builtins` variable to any value other than `yes`.
+
+### Aliases
+
+To save repetitive typing, custom aliases can be defined with the following syntax:
+
+`| alias NAME=PIPE | LINE @@@`
+
+The trailing `@@@` (override with the `alias_terminator` variable) terminates the alias definition and causes it to be saved.
+
+#### Examples
+
+- `| alias tac=sed '1!G;h;$!d' @@@`
+- `| alias top10=sort | uniq -c | sort -rn | head -10 @@@`
+
+#### Alias removal
+
+Any custom alias can be removed with:
+
+`| alias NAME=@@@`
 
 ## Contributions & Thanks
 
 - ctwise
-
-## License
-
-(The MIT License)
-
-Copyright (c) 2013 Robin Breathe
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

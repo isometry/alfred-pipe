@@ -1,6 +1,6 @@
 {
-    "openssl base64 -d": "decode base64",
-    "openssl base64 -e": "encode base64",
+    "base64": "encode base64",
+    "base64 --decode": "decode base64",
     "openssl enc -d -base64 -aes256 -k X": "AES-256 decrypt with passphrase 'X'",
     "openssl enc -e -base64 -aes256 -k X": "AES-256 encrypt with passphrase 'X'",
     "openssl x509 -noout -fingerprint": "x509 fingerprint",

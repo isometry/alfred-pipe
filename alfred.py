@@ -64,8 +64,8 @@ def unescape(query, characters=None):
 
 def work(volatile):
     path = {
-        True: os.getenv('alfred_workflow_cache'),
-        False: os.getenv('alfred_workflow_data')
+        True: os.getenv('alfred_workflow_cache', os.getenv('TMPDIR', '/tmp')),
+        False: os.getenv('alfred_workflow_data', os.getenv('HOME', '/tmp'))
     }[bool(volatile)]
     return _create(os.path.expanduser(path))
 
