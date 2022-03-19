@@ -6,12 +6,14 @@ An [Alfred](http://www.alfredapp.com/) workflow enabling easy transformation of 
 
 - [Alfred](http://www.alfredapp.com/) (version 2.0+)
 - The [Alfred Powerpack](http://www.alfredapp.com/powerpack/).
+- Python 3 (`xcode-select --install` or [Homebrew](https://brew.sh/))
 
 ## Usage
 
 Trigger the workflow by hotkey or keyword (default=`|`, override with the `keyword` variable) followed by an arbitrarily simple or complex shell one-liner to transform the contents of the clipboard in-place; optionally use the `Cmd`-modifier to immediately paste the results into the foreground app, or the `Alt`-modifier to show the results in large type.
 
 Two hotkeys are configurable:
+
 - transform the current contents of the clipboard (like the keyword); recommended hotkey: `Ctrl-Cmd-\`
 - transform the current selection in the foreground app; recommended hotkey: `Ctrl-Cmd-C`
 
