@@ -526,6 +526,8 @@
 			<dict>
 				<key>config</key>
 				<dict>
+					<key>availableviaurlhandler</key>
+					<true/>
 					<key>triggerid</key>
 					<string>pipe</string>
 				</dict>
@@ -617,147 +619,221 @@ Any custom alias can be removed with:
 			<key>0FCF109F-A181-4D53-A4DB-DB54DA7440B8</key>
 			<dict>
 				<key>xpos</key>
-				<integer>700</integer>
+				<real>700</real>
 				<key>ypos</key>
-				<integer>240</integer>
+				<real>240</real>
 			</dict>
 			<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
 			<dict>
 				<key>note</key>
 				<string>Run the one-liner</string>
 				<key>xpos</key>
-				<integer>430</integer>
+				<real>430</real>
 				<key>ypos</key>
-				<integer>180</integer>
+				<real>180</real>
 			</dict>
 			<key>1D296119-4F9D-4FDC-9777-1DA7CF655D19</key>
 			<dict>
 				<key>xpos</key>
-				<integer>560</integer>
+				<real>560</real>
 				<key>ypos</key>
-				<integer>210</integer>
+				<real>210</real>
 			</dict>
 			<key>39932D9C-E166-4541-96DD-CB688AC3AC97</key>
 			<dict>
 				<key>note</key>
 				<string>display==1</string>
 				<key>xpos</key>
-				<integer>850</integer>
+				<real>850</real>
 				<key>ypos</key>
-				<integer>150</integer>
+				<real>150</real>
 			</dict>
 			<key>42BF3CF4-67C1-4182-B7F5-7456DB227F9F</key>
 			<dict>
 				<key>xpos</key>
-				<integer>470</integer>
+				<real>470</real>
 				<key>ypos</key>
-				<integer>20</integer>
+				<real>20</real>
 			</dict>
 			<key>51CD3227-55F9-4AB5-BF83-79C74807C152</key>
 			<dict>
 				<key>note</key>
 				<string>display=1</string>
 				<key>xpos</key>
-				<integer>350</integer>
+				<real>350</real>
 				<key>ypos</key>
-				<integer>150</integer>
+				<real>150</real>
 			</dict>
 			<key>60EC2263-CC57-4763-8CEA-629C2E53E6EB</key>
 			<dict>
 				<key>xpos</key>
-				<integer>30</integer>
+				<real>30</real>
 				<key>ypos</key>
-				<integer>250</integer>
+				<real>250</real>
 			</dict>
 			<key>74681B4B-CBE4-403F-BDF7-39F4D2319ABD</key>
 			<dict>
 				<key>note</key>
 				<string>Prompt for one-liner or alias</string>
 				<key>xpos</key>
-				<integer>190</integer>
+				<real>190</real>
 				<key>ypos</key>
-				<integer>180</integer>
+				<real>180</real>
 			</dict>
 			<key>8E5E1774-FB5B-47C7-A0E0-AE958708254F</key>
 			<dict>
 				<key>xpos</key>
-				<integer>700</integer>
+				<real>700</real>
 				<key>ypos</key>
-				<integer>120</integer>
+				<real>120</real>
 			</dict>
 			<key>9B8A5712-D806-47E3-9045-EC31AB0C6485</key>
 			<dict>
 				<key>note</key>
 				<string>paste!=1</string>
 				<key>xpos</key>
-				<integer>630</integer>
+				<real>630</real>
 				<key>ypos</key>
-				<integer>150</integer>
+				<real>150</real>
 			</dict>
 			<key>A94F5286-0602-4B7F-A5D3-55FDD8AB3217</key>
 			<dict>
 				<key>xpos</key>
-				<integer>330</integer>
+				<real>330</real>
 				<key>ypos</key>
-				<integer>20</integer>
+				<real>20</real>
 			</dict>
 			<key>CB1F4AD1-CC6A-4CE9-9953-5BA92C4B2634</key>
 			<dict>
 				<key>note</key>
 				<string>paste==1</string>
 				<key>xpos</key>
-				<integer>630</integer>
+				<real>630</real>
 				<key>ypos</key>
-				<integer>270</integer>
+				<real>270</real>
 			</dict>
 			<key>D4DF549F-4556-4AA6-BF1A-159154EB3051</key>
 			<dict>
 				<key>note</key>
 				<string>paste=1</string>
 				<key>xpos</key>
-				<integer>350</integer>
+				<real>350</real>
 				<key>ypos</key>
-				<integer>260</integer>
+				<real>260</real>
 			</dict>
 			<key>D637E280-521E-432F-85C1-3F58E064A66E</key>
 			<dict>
 				<key>note</key>
 				<string>Transform clipboard</string>
 				<key>xpos</key>
-				<integer>30</integer>
+				<real>30</real>
 				<key>ypos</key>
-				<integer>110</integer>
+				<real>110</real>
 			</dict>
 			<key>FA80CA00-3581-44C7-BE72-66A1285D4198</key>
 			<dict>
 				<key>xpos</key>
-				<integer>920</integer>
+				<real>920</real>
 				<key>ypos</key>
-				<integer>120</integer>
+				<real>120</real>
 			</dict>
 			<key>FF37CF97-11D9-4324-ADDD-6F67B697BD34</key>
 			<dict>
 				<key>note</key>
 				<string>Transform selection</string>
 				<key>xpos</key>
-				<integer>190</integer>
+				<real>190</real>
 				<key>ypos</key>
-				<integer>20</integer>
+				<real>20</real>
 			</dict>
 		</dict>
-		<key>variables</key>
-		<dict>
-			<key>alias_terminator</key>
-			<string>@@@</string>
-			<key>keyword</key>
-			<string>|</string>
-			<key>load_builtins</key>
-			<string>yes</string>
-			<key>max_results</key>
-			<string>9</string>
-		</dict>
+		<key>userconfigurationconfig</key>
+		<array>
+			<dict>
+				<key>config</key>
+				<dict>
+					<key>default</key>
+					<string>|</string>
+					<key>placeholder</key>
+					<string></string>
+					<key>required</key>
+					<true/>
+					<key>trim</key>
+					<true/>
+				</dict>
+				<key>description</key>
+				<string></string>
+				<key>label</key>
+				<string>Keyword</string>
+				<key>type</key>
+				<string>textfield</string>
+				<key>variable</key>
+				<string>keyword</string>
+			</dict>
+			<dict>
+				<key>config</key>
+				<dict>
+					<key>default</key>
+					<true/>
+					<key>required</key>
+					<false/>
+					<key>text</key>
+					<string>Load built-in aliases</string>
+				</dict>
+				<key>description</key>
+				<string></string>
+				<key>label</key>
+				<string>Built-ins</string>
+				<key>type</key>
+				<string>checkbox</string>
+				<key>variable</key>
+				<string>load_builtins</string>
+			</dict>
+			<dict>
+				<key>config</key>
+				<dict>
+					<key>default</key>
+					<string>@@@</string>
+					<key>placeholder</key>
+					<string></string>
+					<key>required</key>
+					<true/>
+					<key>trim</key>
+					<true/>
+				</dict>
+				<key>description</key>
+				<string>Magic string used to terminate alias entry</string>
+				<key>label</key>
+				<string>Alias terminator</string>
+				<key>type</key>
+				<string>textfield</string>
+				<key>variable</key>
+				<string>alias_terminator</string>
+			</dict>
+			<dict>
+				<key>config</key>
+				<dict>
+					<key>default</key>
+					<string>9</string>
+					<key>placeholder</key>
+					<string>Positive integer required</string>
+					<key>required</key>
+					<true/>
+					<key>trim</key>
+					<true/>
+				</dict>
+				<key>description</key>
+				<string>Maximum number of results to show</string>
+				<key>label</key>
+				<string>Max. Results</string>
+				<key>type</key>
+				<string>textfield</string>
+				<key>variable</key>
+				<string>max_results</string>
+			</dict>
+		</array>
 		<key>version</key>
-		<string>1.3</string>
+		<string>2.0</string>
 		<key>webaddress</key>
 		<string>https://github.com/isometry/alfred-pipe</string>
 	</dict>

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-import itertools
 import os
 import sys
 
+from itertools import islice
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 _MAX_RESULTS_DEFAULT = 9
@@ -61,7 +61,7 @@ def write(text):
 
 def xml(items, maxresults=_MAX_RESULTS_DEFAULT):
     root = Element('items')
-    for item in itertools.islice(items, maxresults):
+    for item in islice(items, maxresults):
         root.append(item.xml())
     return tostring(root, encoding='unicode')
 

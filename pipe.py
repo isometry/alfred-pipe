@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# pipe.alfredworkflow, v1.3
-# Robin Breathe, 2013-2022
+# pipe.alfredworkflow, v2.0
+# Robin Breathe, 2013-2023
 
 import alfred
 import json
@@ -9,8 +9,8 @@ import sys
 import os
 
 from fnmatch import fnmatch
+from itertools import chain
 from os import path
-from time import strftime
 
 DEFAULT_MAX_RESULTS = 9
 DEFAULT_ALIAS_TERMINATOR = "@@@"
@@ -128,7 +128,7 @@ def complete():
     query = sys.argv[1]
 
     max_results = int(os.getenv('max_results', DEFAULT_MAX_RESULTS))
-    load_builtins = bool(os.getenv('builtins_file', "yes") == "yes")
+    load_builtins = bool(int(os.getenv('load_builtins', '1')))
 
     aliases = fetch_aliases(ALIASES_FILE)
     builtins = load_builtins and fetch_builtins(BUILTINS_FILE) or {}
@@ -141,11 +141,7 @@ def complete():
     if query not in builtins:
         results.append(verbatim(query))
 
-    for matches in (
-        match_aliases(aliases, query),
-        match_builtins(builtins, query)
-    ):
-        results.extend(matches)
+    results.extend(chain(match_aliases(aliases, query), match_builtins(builtins, query)))
 
     return alfred.xml(results, maxresults=max_results)
 
