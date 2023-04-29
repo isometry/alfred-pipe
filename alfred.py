@@ -25,11 +25,7 @@ class Item(object):
             value = getattr(self, attribute)
             if value is None:
                 continue
-            try:
-                (value, attributes) = value
-            except:
-                attributes = {}
-            SubElement(item, attribute, attributes).text = value
+            SubElement(item, attribute, {}).text = value
         return item
 
 
